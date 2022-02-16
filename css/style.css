@@ -18,6 +18,7 @@ h2 {
     font-weight: 700;
     text-align: center;
     margin: 30px 0;
+    text-transform: uppercase;
 }
 
 .icon {
@@ -44,3 +45,47 @@ h2 {
 
 
 /* Image part end */
+
+
+/* Calculate Area */
+
+.calculate-area {
+    width: 100%;
+    padding: 30px;
+}
+
+.expenses-area,
+.income-area {
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+.lable {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    background: #ddd;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* Calculate Area end */
