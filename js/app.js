@@ -15,6 +15,8 @@ document.getElementById('calculate').addEventListener('click', function(e) {
         let lastBalance = income.value - totalCost;
         balance.innerText = lastBalance;
         balancehMsg.innerText = "";
+        savingTotal.innerText = "";
+        savingsBalance.innerText = lastBalance;
     } else {
         if (income.value < totalCost) {
 
