@@ -32,31 +32,49 @@
                     <div class="calculate-area">
                         <div class="income-area">
                             <h4>Income</h4>
-                            <table>
-                                <tr>
-                                    <td class="lable"><label for="income">Income:</label></td>
-                                    <td><input type="number" name="income" id="income" placeholder="0"></td>
-                                </tr>
-                            </table>
+
+                            <div class="input-details">
+                                <div class="lable">
+                                    <label for="income">Income:</label>
+                                </div>
+                                <div class="input-field">
+                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <input type="number" name="income" id="income" placeholder="0">
+                                </div>
+                            </div>
                         </div>
                         <div class="expenses-area">
                             <h4>Expenses</h4>
-                            <table class="table">
-                                <tr>
-                                    <td class="lable"><label for="food">Food:</label></td>
-                                    <td><input type="number" name="food" id="food" placeholder="0"></td>
-                                </tr>
-                                <tr>
-                                    <td class="lable"><label for="rent">Rent:</label></td>
-                                    <td><input type="number" name="rent" id="rent" placeholder="0"></td>
-                                </tr>
-                                <tr>
-                                    <td class="lable"><label for="cloth">Cloths:</label></td>
-                                    <td><input type="number" name="cloth" id="cloth" placeholder="0"></td>
-                                </tr>
-                            </table>
+                            <div class="input-details">
+                                <div class="lable">
+                                    <label for="food">Food:</label>
+                                </div>
+                                <div class="input-field">
+                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <input type="number" name="food" id="food" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="input-details">
+                                <div class="lable">
+                                    <label for="rent">Rent:</label>
+                                </div>
+                                <div class="input-field">
+                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <input type="number" name="rent" id="rent" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="input-details">
+                                <div class="lable">
+                                    <label for="cloth">Cloths:</label>
+                                </div>
+                                <div class="input-field">
+                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <input type="number" name="cloth" id="cloth" placeholder="0">
+                                </div>
+                            </div>
+
                             <div class="text-center">
-                                <button class="btn btn-primary mb-3">Calculate</button>
+                                <button id="calculate" class="btn btn-primary mb-3">Calculate</button>
                             </div>
                             <div class="text-center">
                                 <p class="fw-bold mb-0">Total Expenses: <span id="total-expenses">00</span></p>
@@ -67,6 +85,7 @@
                         <div class="savings-area">
                             <table class="table">
                                 <tr>
+                                    <span class="text-danger error">* Please enter the positive value. </span>
                                     <td class="lable"><label for="food">Save:</label></td>
                                     <td><input type="number" name="food" id="food" placeholder="0"></td>
                                     <td>%</td>

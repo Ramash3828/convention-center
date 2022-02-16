@@ -52,6 +52,19 @@ h2 {
 .calculate-area {
     width: 100%;
     padding: 30px;
+    text-align: center;
+}
+
+.input-details {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lable {}
+
+.error {
+    display: none;
 }
 
 .expenses-area,
@@ -69,15 +82,11 @@ table {
     width: 100%;
 }
 
-td.lable {
-    padding-top: 12px;
-}
-
 .lable {
     text-align: right;
     padding-right: 10px;
     font-weight: 700;
-    padding-top: 5px;
+    width: 80px;
 }
 
 input {
