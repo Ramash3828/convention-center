@@ -38,7 +38,7 @@
                                     <label for="income">Income:</label>
                                 </div>
                                 <div class="input-field">
-                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <span class="text-danger " id="msg"> </span>
                                     <input type="number" name="income" id="income" placeholder="0">
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                     <label for="food">Food:</label>
                                 </div>
                                 <div class="input-field">
-                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <span class="text-danger" id="foodMsg"></span>
                                     <input type="number" name="food" id="food" placeholder="0">
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     <label for="rent">Rent:</label>
                                 </div>
                                 <div class="input-field">
-                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <span class="text-danger " id="rentMsg"></span>
                                     <input type="number" name="rent" id="rent" placeholder="0">
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                     <label for="cloth">Cloths:</label>
                                 </div>
                                 <div class="input-field">
-                                    <span class="text-danger error">* Please enter the positive value. </span>
+                                    <span class="text-danger" id="clothMsg"></span>
                                     <input type="number" name="cloth" id="cloth" placeholder="0">
                                 </div>
                             </div>
@@ -78,6 +78,7 @@
                             </div>
                             <div class="text-center">
                                 <p class="fw-bold mb-0">Total Expenses: <span id="total-expenses">00</span></p>
+                                <span class="text-danger" id="balancehMsg"></span>
                                 <p class="fw-bold">Balance: <span id="balance">00</span></p>
                             </div>
                         </div>
@@ -85,11 +86,12 @@
                         <div class="savings-area">
                             <table class="table">
                                 <tr>
-                                    <span class="text-danger error">* Please enter the positive value. </span>
-                                    <td class="lable"><label for="food">Save:</label></td>
-                                    <td><input type="number" name="food" id="food" placeholder="0"></td>
+                                    <span class="text-danger" id="saveMsg"></span>
+                                    <span class="text-danger" id="saveLowMsg"></span>
+                                    <td class="lable"><label for="save">Save:</label></td>
+                                    <td><input type="number" name="save" id="save" placeholder="0"></td>
                                     <td>%</td>
-                                    <td><button id="save" class="btn btn-primary">Save</button></td>
+                                    <td><button id="savebtn" class="btn btn-primary">Save</button></td>
                                 </tr>
                             </table>
                             <div class="text-center">
