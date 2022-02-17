@@ -5,13 +5,14 @@ let cloth = document.getElementById('cloth');
 let totalExpenses = document.getElementById('total-expenses');
 let balance = document.getElementById('balance');
 let balancehMsg = document.getElementById('balancehMsg');
+
 // Calculate Section
-document.getElementById('calculate').addEventListener('click', function(e) {
-    e.preventDefault();
+document.getElementById('calculate').addEventListener('click', function() {
+
     validateInput();
     let totalCost = parseInt(food.value) + parseInt(rent.value) + parseInt(cloth.value);
+    totalExpenses.innerText = totalCost;
     if (income.value > totalCost) {
-        totalExpenses.innerText = totalCost;
         let lastBalance = income.value - totalCost;
         balance.innerText = lastBalance;
         balancehMsg.innerText = "";
@@ -19,26 +20,45 @@ document.getElementById('calculate').addEventListener('click', function(e) {
         savingsBalance.innerText = lastBalance;
     } else {
         if (income.value < totalCost) {
-
             balancehMsg.innerText = "Your earning amount is low!!!";
         }
     }
 });
 
 
-// Validation Check
-let input = document.querySelectorAll('input')
+// Get ID
+function getMassage(magId) {
+    document.getElementById(magId).innerText = "* Please enter the valid number.";
+}
 
+function removeMassage(magId) {
+    document.getElementById(magId).innerText = "";
+}
+
+// Validation Check
 function validateInput() {
-    for (let i = 0; i < input.length; i = i + 1) {
-        console.log(input[i])
-        if (input[i].value == "" || input[i].value < 0) {
-            document.querySelectorAll('span')[i + 1].innerText = "* Please enter the valid number.";
-        } else {
-            document.querySelectorAll('span')[i + 1].innerHTML = "";
-        }
+    if (income.value == "" || income.value < 0) {
+        getMassage('incomeMsg')
+    } else {
+        removeMassage('incomeMsg');
+    }
+    if (food.value == "" || food.value < 0) {
+        getMassage('foodMsg')
+    } else {
+        removeMassage('foodMsg');
+    }
+    if (rent.value == "" || rent.value < 0) {
+        getMassage('rentMsg')
+    } else {
+        removeMassage('rentMsg');
+    }
+    if (cloth.value == "" || cloth.value < 0) {
+        getMassage('clothMsg')
+    } else {
+        removeMassage('clothMsg');
     }
 }
+
 
 
 //Saveings Section
